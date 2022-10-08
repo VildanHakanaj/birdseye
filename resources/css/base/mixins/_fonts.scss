@@ -1,0 +1,42 @@
+@use "../functions" as *;
+@mixin heading-lg{
+    font-size: pxToRem(32);
+    font-weight: 300;
+    line-height: 40px;
+    letter-spacing: -0.5px;
+}
+
+@mixin heading-md{
+    font-size: pxToRem(24);
+    font-weight: 300;
+    line-height: pxToRem(30);
+    letter-spacing: 0;
+
+}
+
+@mixin heading-sm{
+    font-size: pxToRem(24);
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0;
+}
+
+@mixin heading-xs{
+    font-size: pxToRem(18);
+    font-weight: 500;
+    line-height: 23px;
+    letter-spacing: 0;
+}
+
+@mixin body-md{
+    font-size: pxToRem(15);
+    font-weight: 300;
+    line-height: pxToRem(19);
+    letter-spacing: 0;
+}
+@mixin body-sm{
+    font-size: pxToRem(13);
+    font-weight: 300;
+    line-height: pxToRem(16);
+    letter-spacing: 0;
+}

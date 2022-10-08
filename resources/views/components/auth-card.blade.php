@@ -1,5 +1,5 @@
 <div class="auth-card">
-    <div>
+    <div class="auth-title">
         {{ $title }}
     </div>
 

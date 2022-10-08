@@ -1,0 +1,13 @@
+@use "colors" as *;
+@use "reset";
+
+
+:root {
+    @each $color, $shades in $colors {
+        @each $shade, $value in $shades{
+            --clr-#{$color}-#{$shade}: #{$value};
+        }
+    }
+    --clr-white: #fff;
+    --clr-black: #000;
+}
