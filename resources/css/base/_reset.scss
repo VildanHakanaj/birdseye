@@ -20,6 +20,8 @@ html:focus-within {
 /* Set core body defaults */
 html, body {
     min-height: 100%;
+    height: 100%;
+    border: 1px solid green;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
 }

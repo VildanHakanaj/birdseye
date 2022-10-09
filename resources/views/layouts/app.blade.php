@@ -11,10 +11,34 @@
     <link rel="stylesheet" href="{{mix("css/app.css")}}">
 </head>
 <body>
-<div class="wrapper {{isset($sidebar) ? 'sidebar-layout' : ''}}">
-    @if(isset($sidebar))
-        {{ $sidebar }}
-    @endif
+<div class="wrapper sidebar-layout">
+    <div class="sidebar">
+        <div class="sidebar__logo">
+            <img src="{{ url("images/logo.svg") }}" alt="">
+        </div>
+        <ul class="sidebar__menu">
+            <li class="sidebar__item">
+                <img class="sidebar__icon"
+                     src="{{url("images/icon-nav-home.svg")}}"
+                     alt=""></li>
+            <li class="sidebar__item">
+                <img class="sidebar__icon"
+                     src="{{url("images/icon-nav-movies.svg")}}"
+                     alt=""></li>
+            <li class="sidebar__item">
+                <img class="sidebar__icon"
+                     src="{{url("images/icon-nav-tv-series.svg")}}"
+                     alt=""></li>
+            <li class="sidebar__item">
+                <img class="sidebar__icon"
+                     src="{{url("images/icon-nav-bookmark.svg")}}"
+                     alt="">
+            </li>
+        </ul>
+        <div class="sidebar__avatar">
+            <img src="{{url("images/image-avatar.png")}}" alt="">
+        </div>
+    </div>
     <main>
         {{ $slot }}
     </main>

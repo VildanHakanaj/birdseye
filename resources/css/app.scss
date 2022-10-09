@@ -3,6 +3,7 @@
 body{
     font-family: 'Outfit', sans-serif;;
     background-color: var(--clr-vulcan-900);
+    height: 100%;
 }
 
 #auth-layout{
@@ -11,12 +12,19 @@ body{
     align-items: center;
 }
 
+.wrapper{
+    max-width: pxToRem(1372);
+    height: 100%;
+}
+
 .sidebar-layout{
     display: flex;
     gap: pxToRem(38);
-    max-width: pxToRem(1372);
-    margin: pxToRem(32) auto;
-    height: 100%;
-    border: 1px solid red;
+    margin: 0 auto;
+    padding: pxToRem(32);
+}
+
+main{
+    width: 100%;
 }
 

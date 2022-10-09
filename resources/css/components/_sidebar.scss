@@ -2,7 +2,37 @@
 
 .sidebar{
     max-width: pxToRem(96);
+    width: 100%;
     background-color: var(--clr-mirage-900);
     border-radius: pxToRem(20);
     height: 100%;
+    max-height: pxToRem(960);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: pxToRem(75);
+    padding: pxToRem(32) 0;
+    &__menu{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        gap: pxToRem(40);
+    }
+
+    &__item{
+        cursor: pointer;
+
+        &:hover{
+            
+        }
+    }
+
+    &__avatar{
+        width: pxToRem(40);
+        height: pxToRem(40);
+        border: 1px solid var(--clr-white);
+        border-radius: 50%;
+        margin-top: auto;
+        cursor: pointer;
+    }
 }

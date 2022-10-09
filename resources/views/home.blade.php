@@ -1,38 +1,21 @@
 <x-app-layout>
-    <x-slot name="sidebar">
-        <div class="sidebar">
-            <div class="sidebar__logo">
-                <img src="{{ url("images/logo.svg") }}" alt="">
-            </div>
-            <ul class="sidebar__menu">
-                <li class="sidebar__item">
-                    <img class="sidebar__icon"
-                         src="{{url("images/icon-nav-home.svg")}}"
-                         alt=""></li>
-                <li class="sidebar__item">
-                    <img class="sidebar__icon"
-                         src="{{url("images/icon-nav-movies.svg")}}"
-                         alt=""></li>
-                <li class="sidebar__item">
-                    <img class="sidebar__icon"
-                         src="{{url("images/icon-nav-tv-series.svg")}}"
-                         alt=""></li>
-                <li class="sidebar__item">
-                    <img class="sidebar__icon"
-                         src="{{url("images/icon-nav-bookmark.svg")}}"
-                         alt="">
-                </li>
-            </ul>
-            <div class="sidebar__avatar">
-                <img src="{{url("images/image-avatar.png")}}" alt="">
-            </div>
+    {{--Search bar--}}
+    <div class="search">
+        <div class="search__icon">
+            <img src="{{url("images/icon-search.svg")}}" alt="">
         </div>
-    </x-slot>
-
-    <input type="text" class="search">
-    <h1>Trending</h1>
-    <div>
-        Test
+        <input type="text"
+               class="search__input"
+               name="search" id="search"
+               placeholder="Search for movies or TV series">
     </div>
-
+    {{--    <div class="trending">--}}
+    {{--        <h2 class="trending__title">Trending</h2>--}}
+    {{--        <div class="trending__carousel">--}}
+    {{--            <div class="trending__item"></div>--}}
+    {{--            <div class="trending__item"></div>--}}
+    {{--            <div class="trending__item"></div>--}}
+    {{--            <div class="trending__item"></div>--}}
+    {{--        </div>--}}
+    {{--    </div>--}}
 </x-app-layout>
