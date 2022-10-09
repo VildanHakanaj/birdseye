@@ -1,0 +1,82 @@
+@use "../base" as *;
+
+.auth-card{
+    max-width: pxToRem(400);
+    width: 100%;
+    max-height: pxToRem(418);
+    height: 100%;
+    padding: pxToRem(32);
+    background-color: var(--clr-mirage-900);
+    border-radius: pxToRem(20);
+    &__title{
+        color: white;
+        @include heading-lg;
+        margin-bottom: pxToRem(40);
+    }
+    & form{
+        display: flex;
+        flex-flow: column;
+        gap: pxToRem(24);
+    }
+
+    &__input-group{
+        display: flex;
+        flex-flow: column;
+        position: relative;
+        & label{
+            position: absolute;
+            left: pxToRem(16);
+            color: var(--clr-white);
+            @include body-md;
+        }
+        & input {
+            padding: pxToRem(8.5) pxToRem(16);
+            color: var(--clr-white);
+            @include body-md;
+            background: none;
+            border: none;
+            border-bottom: 1px solid var(--clr-waikawa-gray-500);
+            outline: none;
+            &:focus{
+                & + label{
+                    color: red;
+                }
+                border-color: var(--clr-white);
+            }
+            &.error{
+                border-color: var(--clr-sunset-orange-500);
+            }
+        }
+    }
+
+    &__button--primary{
+        color: var(--clr-white);
+        border-radius: pxToRem(6);
+        background-color: var(--clr-sunset-orange-500);
+        margin-top: pxToRem(16);
+        border: 1px solid var(--clr-sunset-orange-500);
+        @include body-md;
+        padding: pxToRem(13.5) 0;
+        transition: .2s ease-in;
+        cursor: pointer;
+        &:hover{
+            color: var(--clr-vulcan-900);
+            background-color: var(--clr-white);
+            border-color: var(--clr-white);
+        }
+
+    }
+
+    & .action{
+        color: var(--clr-white);
+        @include body-md;
+        margin: 0 auto;
+        & a{
+            color: var(--clr-sunset-orange-500);
+            text-decoration: none;
+            margin-left: pxToRem(9);
+            display: inline-block;
+        }
+    }
+
+}

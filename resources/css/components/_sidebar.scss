@@ -1,0 +1,8 @@
+@use "../base" as *;
+
+.sidebar{
+    max-width: pxToRem(96);
+    background-color: var(--clr-mirage-900);
+    border-radius: pxToRem(20);
+    height: 100%;
+}

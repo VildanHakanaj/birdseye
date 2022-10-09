@@ -47,4 +47,14 @@ $colors: (
         800: #2a3b62,
         900: #161d2f,
     ),
-)
+);
+
+:root {
+    @each $color, $shades in $colors {
+        @each $shade, $value in $shades{
+            --clr-#{$color}-#{$shade}: #{$value};
+        }
+    }
+    --clr-white: #fff;
+    --clr-black: #000;
+}
