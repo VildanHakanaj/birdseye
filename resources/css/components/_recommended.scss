@@ -1,0 +1,9 @@
+@use "../base" as *;
+
+.recommended{
+    &__items{
+        display: flex;
+        flex-wrap: wrap;
+        gap: pxToRem(40);
+    }
+}

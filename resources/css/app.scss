@@ -4,6 +4,7 @@ body{
     font-family: 'Outfit', sans-serif;;
     background-color: var(--clr-vulcan-900);
     height: 100%;
+    overflow-x: hidden;
 }
 
 #auth-layout{
@@ -26,5 +27,29 @@ body{
 
 main{
     width: 100%;
+}
+
+.heading-lg{
+    @include heading-lg;
+}
+
+.text-white{
+    color: var(--clr-white);
+}
+
+.mb-32{
+    margin-bottom: pxToRem(32);
+}
+
+.body-sm{
+    @include body-sm;
+}
+
+.heading-xs{
+    @include heading-xs;
+}
+
+.mb-5{
+    margin-bottom: pxToRem(5);
 }
 

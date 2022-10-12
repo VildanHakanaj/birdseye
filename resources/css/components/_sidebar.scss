@@ -2,6 +2,7 @@
 
 .sidebar{
     max-width: pxToRem(96);
+    flex-shrink: 0;
     width: 100%;
     background-color: var(--clr-mirage-900);
     border-radius: pxToRem(20);
@@ -21,10 +22,6 @@
 
     &__item{
         cursor: pointer;
-
-        &:hover{
-            
-        }
     }
 
     &__avatar{

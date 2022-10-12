@@ -1,8 +1,9 @@
 @use "../base" as *;
 
 .search{
-    width: 100%;
     display: flex;
+    width: 100%;
+
     gap: pxToRem(28);
     &__icon{
         width: pxToRem(24);
@@ -16,9 +17,10 @@
         padding-bottom: pxToRem(14);
         background: none;
         outline: none;
+        border-bottom: 1px solid var(--clr-vulcan-900);
         width: 100%;
         &:focus{
-            border-bottom: 1px solid var(--clr-waikawa-gray-500);
+            border-color: var(--clr-waikawa-gray-500);
         }
     }
 }

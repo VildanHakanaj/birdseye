@@ -2,74 +2,16 @@
 
 .trending{
     color: var(--clr-white);
+    margin-bottom: pxToRem(40);
+    overflow-x: hidden;
+    &__carousel{
+        display: flex;
+        gap: pxToRem(40);
+    }
+
     &__heading{
         @include heading-lg;
         margin-bottom: pxToRem(24);
-    }
-
-    &__item{
-        cursor: pointer;
-        max-width: pxToRem(470);
-        border-radius: pxToRem(8);
-        position: relative;
-        overflow: hidden;
-    }
-
-    &__overlay{
-        position: absolute;
-        display: flex;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        transition: .1s ease-in;
-        padding: pxToRem(16) pxToRem(24) pxToRem(24) pxToRem(24);
-        &:hover{
-            background-color: rgba(black, .3);
-        }
-
-        &:hover .trending__play{
-            display: flex;
-        }
-    }
-
-    &__bookmark{
-        position: absolute;
-        top: pxToRem(16);
-        right: pxToRem(24);
-        width: pxToRem(32);
-        height: pxToRem(32);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-        background-color: rgba(black, .5);
-        cursor: pointer;
-    }
-
-    &__play{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        display: none;
-        transition: .3s ease-in;
-        gap: pxToRem(20);
-        align-items: center;
-        background-color: rgba(#fff, .3);
-        padding: pxToRem(9) pxToRem(24) pxToRem(9) pxToRem(9);
-        border-radius: pxToRem(50);
-    }
-
-    &__meta {
-        margin-top: auto;
-        div:first-child{
-            @include body-md;
-            color: var(--clr-white);
-        }
-    }
-
-    &__title{
-        @include heading-sm
     }
 }
 
