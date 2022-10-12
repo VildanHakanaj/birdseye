@@ -7,6 +7,17 @@
     &__carousel{
         display: flex;
         gap: pxToRem(40);
+        overflow-x: scroll;
+        box-sizing: content-box;
+        &::-webkit-scrollbar {
+            height: .4em;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--clr-white);
+            display: inline-block;
+            width: .4rem;
+            border-radius: 8px;
+        }
     }
 
     &__heading{

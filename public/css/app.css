@@ -253,6 +253,17 @@ picture {
 .trending__carousel {
   display: flex;
   gap: 2.5rem;
+  overflow-x: scroll;
+  box-sizing: content-box;
+}
+.trending__carousel::-webkit-scrollbar {
+  height: 0.4em;
+}
+.trending__carousel::-webkit-scrollbar-thumb {
+  background-color: var(--clr-white);
+  display: inline-block;
+  width: 0.4rem;
+  border-radius: 8px;
 }
 .trending__heading {
   font-size: 2rem;
