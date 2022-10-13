@@ -3,6 +3,7 @@
     <x-trending :movies="$movies->where('is_trending')"></x-trending>
 
     <x-content-section :movies="$movies">
+
         <x-slot name="heading">
             Recommended for you
         </x-slot>

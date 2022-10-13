@@ -14,19 +14,20 @@ body{
 }
 
 .wrapper{
-    max-width: pxToRem(1372);
+    max-width: pxToRem(1440);
     height: 100%;
 }
 
 .sidebar-layout{
     display: flex;
-    gap: pxToRem(38);
+    gap: pxToRem(36);
     margin: 0 auto;
     padding: pxToRem(32);
 }
 
 main{
     width: 100%;
+    padding: pxToRem(32) 0
 }
 
 .heading-lg{

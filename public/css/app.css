@@ -222,6 +222,7 @@ picture {
 .search {
   display: flex;
   width: 100%;
+  margin-bottom: 2rem;
   gap: 1.75rem;
 }
 .search__icon {
@@ -382,19 +383,20 @@ body {
 }
 
 .wrapper {
-  max-width: 85.75rem;
+  max-width: 90rem;
   height: 100%;
 }
 
 .sidebar-layout {
   display: flex;
-  gap: 2.375rem;
+  gap: 2.25rem;
   margin: 0 auto;
   padding: 2rem;
 }
 
 main {
   width: 100%;
+  padding: 2rem 0;
 }
 
 .heading-lg {

@@ -3,7 +3,7 @@
 .search{
     display: flex;
     width: 100%;
-
+    margin-bottom: pxToRem(32);
     gap: pxToRem(28);
     &__icon{
         width: pxToRem(24);
