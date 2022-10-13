@@ -1,6 +1,7 @@
 @use "../base" as *;
 
-.recommended{
+.section{
+    margin-bottom: pxToRem(32);
     &__items{
         display: flex;
         flex-wrap: wrap;

@@ -359,7 +359,10 @@ picture {
   color: var(--clr-white);
 }
 
-.recommended__items {
+.section {
+  margin-bottom: 2rem;
+}
+.section__items {
   display: flex;
   flex-wrap: wrap;
   gap: 2.5rem;
