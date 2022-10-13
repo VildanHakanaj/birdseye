@@ -18,22 +18,36 @@
         </div>
         <ul class="sidebar__menu">
             <li class="sidebar__item">
-                <img class="sidebar__icon"
-                     src="{{url("images/icon-nav-home.svg")}}"
-                     alt=""></li>
-            <li class="sidebar__item">
-                <img class="sidebar__icon"
-                     src="{{url("images/icon-nav-movies.svg")}}"
-                     alt=""></li>
-            <li class="sidebar__item">
-                <img class="sidebar__icon"
-                     src="{{url("images/icon-nav-tv-series.svg")}}"
-                     alt=""></li>
-            <li class="sidebar__item">
-                <img class="sidebar__icon"
-                     src="{{url("images/icon-nav-bookmark.svg")}}"
-                     alt="">
+                <a href="/">
+                    <img class="sidebar__icon"
+                         src="{{url("images/icon-nav-home.svg")}}"
+                         alt="">
+
+                </a>
             </li>
+            <li class="sidebar__item">
+                <a href="/movie">
+                    <img class="sidebar__icon"
+                         src="{{url("images/icon-nav-movies.svg")}}"
+                         alt="">
+                </a>
+            </li>
+            <li class="sidebar__item">
+                <a href="/tv-series">
+                    <img class="sidebar__icon"
+                         src="{{url("images/icon-nav-tv-series.svg")}}"
+                         alt="">
+                </a>
+            </li>
+            @auth
+                <li class="sidebar__item">
+                    <a href="/my-bookmarks">
+                        <img class="sidebar__icon"
+                             src="{{url("images/icon-nav-bookmark.svg")}}"
+                             alt="">
+                    </a>
+                </li>
+            @endauth
         </ul>
         <div class="sidebar__avatar">
             <img src="{{url("images/image-avatar.png")}}" alt="">

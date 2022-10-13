@@ -3,9 +3,11 @@
         <div class="movie-card movie-card--small">
             <img class="movie-card__image" src="{{url($movie->thumbnail_regular_medium)}}">
             <div class="movie-card__overlay">
-                <div class="movie-card__bookmark">
-                    <img src="{{url("images/icon-bookmark-empty.svg")}}" alt="Bookmark icon">
-                </div>
+                @auth
+                    <div class="movie-card__bookmark">
+                        <img src="{{url("images/icon-bookmark-empty.svg")}}" alt="Bookmark icon">
+                    </div>
+                @endauth
                 <div class="movie-card__play">
                     <img src="{{url("images/icon-play.svg")}}" alt="">
                     <span>Play</span>

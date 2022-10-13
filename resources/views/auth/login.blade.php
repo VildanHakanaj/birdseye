@@ -7,7 +7,6 @@
 
         <div>
 
-
         <form method="POST" action="{{ route('login') }}">
             @csrf
             <div class="auth-card__input-group">
