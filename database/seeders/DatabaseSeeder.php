@@ -3,8 +3,10 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Category;
 use App\Models\Movie;
 use Illuminate\Database\Seeder;
+use Psy\Util\Str;
 
 class DatabaseSeeder extends Seeder
 {
@@ -17,6 +19,17 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
 
+
+        Category::create([
+            "name" => "Movie",
+            "slug" => \Illuminate\Support\Str::slug("Movie")
+        ]);
+
+        Category::create([
+            "name" => "Tv Series",
+            "slug" => \Illuminate\Support\Str::slug("Tv Series")
+        ]);
+
         $data = collect(json_decode($this->data()));
         $data->each(function ($movie) {
             Movie::create([
@@ -27,11 +40,13 @@ class DatabaseSeeder extends Seeder
                 "thumbnail_regular_medium" => str_replace("./assets/", "images/", $movie->thumbnail->regular->medium),
                 "thumbnail_regular_large" => str_replace("./assets/", "images/", $movie->thumbnail->regular->large),
                 "year" => $movie->year,
-                "category_id" => 1,
+                "category_id" => $movie->category,
                 "rating" => $movie->rating,
                 "is_trending" => (boolean)$movie->isTrending
             ])->save();
         });
+
+
 
     }
 
@@ -52,7 +67,7 @@ class DatabaseSeeder extends Seeder
       }
     },
     "year": 2019,
-    "category": "Movie",
+    "category": 1,
     "rating": "PG",
     "isBookmarked": false,
     "isTrending": true
@@ -71,7 +86,7 @@ class DatabaseSeeder extends Seeder
       }
     },
     "year": 2021,
-    "category": "Movie",
+    "category": 1,
     "rating": "PG",
     "isBookmarked": false,
     "isTrending": true
@@ -90,7 +105,7 @@ class DatabaseSeeder extends Seeder
       }
     },
     "year": 2019,
-    "category": "TV Series",
+    "category": 2,
     "rating": "E",
     "isBookmarked": false,
     "isTrending": true
@@ -109,7 +124,7 @@ class DatabaseSeeder extends Seeder
       }
     },
     "year": 2021,
-    "category": "Movie",
+    "category": 1,
     "rating": "18+",
     "isBookmarked": false,
     "isTrending": true
@@ -128,7 +143,7 @@ class DatabaseSeeder extends Seeder
       }
     },
     "year": 2018,
-    "category": "TV Series",
+    "category": 2,
     "rating": "PG",
     "isBookmarked": true,
     "isTrending": true
@@ -143,7 +158,7 @@ class DatabaseSeeder extends Seeder
       }
     },
     "year": 2019,
-    "category": "Movie",
+    "category": 1,
     "rating": "E",
     "isBookmarked": false,
     "isTrending": false
@@ -158,7 +173,7 @@ class DatabaseSeeder extends Seeder
       }
     },
     "year": 2019,
-    "category": "TV Series",
+    "category": 2,
     "rating": "PG",
     "isBookmarked": false,
     "isTrending": false
@@ -173,7 +188,7 @@ class DatabaseSeeder extends Seeder
       }
     },
     "year": 2017,
-    "category": "Movie",
+    "category": 1,
     "rating": "18+",
     "isBookmarked": true,
     "isTrending": false
@@ -188,7 +203,7 @@ class DatabaseSeeder extends Seeder
       }
     },
     "year": 2019,
-    "category": "Movie",
+    "category": 1,
     "rating": "E",
     "isBookmarked": false,
     "isTrending": false
@@ -203,7 +218,7 @@ class DatabaseSeeder extends Seeder
       }
     },
     "year": 2016,
-    "category": "TV Series",
+    "category": 2,
     "rating": "PG",
     "isBookmarked": false,
     "isTrending": false
@@ -218,7 +233,7 @@ class DatabaseSeeder extends Seeder
       }
     },
     "year": 2016,
-    "category": "TV Series",
+    "category": 2,
     "rating": "18+",
     "isBookmarked": false,
     "isTrending": false
@@ -233,7 +248,7 @@ class DatabaseSeeder extends Seeder
       }
     },
     "year": 2017,
-    "category": "Movie",
+    "category": 1,
     "rating": "E",
     "isBookmarked": false,
     "isTrending": false
@@ -248,7 +263,7 @@ class DatabaseSeeder extends Seeder
       }
     },
     "year": 2016,
-    "category": "TV Series",
+    "category": 2,
     "rating": "PG",
     "isBookmarked": false,
     "isTrending": false
@@ -263,7 +278,7 @@ class DatabaseSeeder extends Seeder
       }
     },
     "year": 2015,
-    "category": "TV Series",
+    "category": 2,
     "rating": "E",
     "isBookmarked": true,
     "isTrending": false
@@ -278,7 +293,7 @@ class DatabaseSeeder extends Seeder
       }
     },
     "year": 2017,
-    "category": "Movie",
+    "category": 1,
     "rating": "PG",
     "isBookmarked": true,
     "isTrending": false
@@ -293,7 +308,7 @@ class DatabaseSeeder extends Seeder
       }
     },
     "year": 2018,
-    "category": "TV Series",
+    "category": 2,
     "rating": "18+",
     "isBookmarked": false,
     "isTrending": false
@@ -308,7 +323,7 @@ class DatabaseSeeder extends Seeder
       }
     },
     "year": 2015,
-    "category": "Movie",
+    "category": 1,
     "rating": "PG",
     "isBookmarked": false,
     "isTrending": false
@@ -323,7 +338,7 @@ class DatabaseSeeder extends Seeder
       }
     },
     "year": 2021,
-    "category": "Movie",
+    "category": 1,
     "rating": "PG",
     "isBookmarked": true,
     "isTrending": false
@@ -338,7 +353,7 @@ class DatabaseSeeder extends Seeder
       }
     },
     "year": 2017,
-    "category": "Movie",
+    "category": 1,
     "rating": "18+",
     "isBookmarked": true,
     "isTrending": false
@@ -353,7 +368,7 @@ class DatabaseSeeder extends Seeder
       }
     },
     "year": 2017,
-    "category": "Movie",
+    "category": 1,
     "rating": "E",
     "isBookmarked": false,
     "isTrending": false
@@ -368,7 +383,7 @@ class DatabaseSeeder extends Seeder
       }
     },
     "year": 2013,
-    "category": "TV Series",
+    "category": 2,
     "rating": "PG",
     "isBookmarked": false,
     "isTrending": false
@@ -383,7 +398,7 @@ class DatabaseSeeder extends Seeder
       }
     },
     "year": 2017,
-    "category": "Movie",
+    "category": 1,
     "rating": "E",
     "isBookmarked": true,
     "isTrending": false
@@ -398,7 +413,7 @@ class DatabaseSeeder extends Seeder
       }
     },
     "year": 2018,
-    "category": "TV Series",
+    "category": 2,
     "rating": "PG",
     "isBookmarked": false,
     "isTrending": false
@@ -413,7 +428,7 @@ class DatabaseSeeder extends Seeder
       }
     },
     "year": 2016,
-    "category": "TV Series",
+    "category": 2,
     "rating": "E",
     "isBookmarked": true,
     "isTrending": false
@@ -428,7 +443,7 @@ class DatabaseSeeder extends Seeder
       }
     },
     "year": 2020,
-    "category": "TV Series",
+    "category": 2,
     "rating": "PG",
     "isBookmarked": false,
     "isTrending": false
@@ -443,7 +458,7 @@ class DatabaseSeeder extends Seeder
       }
     },
     "year": 2016,
-    "category": "TV Series",
+    "category": 2,
     "rating": "PG",
     "isBookmarked": false,
     "isTrending": false
@@ -458,7 +473,7 @@ class DatabaseSeeder extends Seeder
       }
     },
     "year": 2017,
-    "category": "Movie",
+    "category": 1,
     "rating": "18+",
     "isBookmarked": true,
     "isTrending": false
@@ -473,7 +488,7 @@ class DatabaseSeeder extends Seeder
       }
     },
     "year": 2018,
-    "category": "TV Series",
+    "category": 2,
     "rating": "18+",
     "isBookmarked": false,
     "isTrending": false
@@ -488,7 +503,7 @@ class DatabaseSeeder extends Seeder
       }
     },
     "year": 2017,
-    "category": "Movie",
+    "category": 1,
     "rating": "PG",
     "isBookmarked": true,
     "isTrending": false
